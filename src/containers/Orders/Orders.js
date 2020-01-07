@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axiosOrders from "../../axios-orders";
 import OrderItem from "../../components/Order/OrderItem/OrderItem";
-import withLoader from '../../hoc/withLoader/withLoader';
+import withLoaderHandler from '../../hoc/withLoaderHandler/withLoaderHandler';
 
 class Orders extends Component {
   state = {
@@ -29,4 +29,4 @@ class Orders extends Component {
   }
 }
 
-export default withLoader(Orders, axiosOrders);
+export default withLoaderHandler(Orders, axiosOrders);

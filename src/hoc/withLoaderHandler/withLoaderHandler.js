@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
-const withLoader = (WrappedComponent, axios) => {
-  return class extends Component {
+const withLoaderHandler = (WrappedComponent, axios) => {
+  return class WithLoader extends Component {
 
     constructor(props) {
       super(props);
@@ -33,4 +33,4 @@ const withLoader = (WrappedComponent, axios) => {
   }
 };
 
-export default withLoader;
+export default withLoaderHandler;
