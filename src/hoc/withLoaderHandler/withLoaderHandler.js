@@ -8,6 +8,7 @@ const withLoaderHandler = (WrappedComponent, axios) => {
       super(props);
 
       this.state = {
+        error:null,
         loading:false,
       }
 
@@ -19,6 +20,9 @@ const withLoaderHandler = (WrappedComponent, axios) => {
     axios.interceptors.response.use(res => {
       this.setState({loading:!this.state.loading})
       return res
+    }, error => {
+      this.setState({loading:!this.state.loading})
+      throw error
     })
   }
 
